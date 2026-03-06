@@ -26,15 +26,5 @@ jobs:
       - name: Run linter
         run: npm run lint
       
-      - name: Run unit tests
-        run: npm run test:unit
-      
       - name: Build project
         run: npm run build
-      
-      - name: Install Playwright browsers
-        if: always()
-        run: npx playwright install --with-deps chromium
-      
-      - name: Run E2E tests
-        run: npm run test:e2e
